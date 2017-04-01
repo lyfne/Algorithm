@@ -13,7 +13,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let array = [3, 4, 7, 1, 10, 6, 2, 19, 5, 34, 78, 45, 23, 42, 109, 984, 234]//, 567, 342, 10924, 2345, 542, 5069, 40987,8745, 4, 3, 56, 987]
+        let array = [3, 4, 7, 1, 10, 6, 2, 19, 5, 34, 78, 45, 23, 42, 109, 984, 234, 567, 342, 10924, 2345, 542, 5069, 40987,8745, 4, 3, 56, 987, 6532, 59, 893, 7923, 90175, 359, 5820, 863, 81, 78, 4, 87, 98, 2415]
+        print("Array Count: ", array.count, "\n")
         
         var array1 = array
         var array2 = array

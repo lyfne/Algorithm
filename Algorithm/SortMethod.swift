@@ -68,7 +68,6 @@ func cocktailSort(array: inout Array<Int>) {
         left += 1
     }
     
-    
     print("CocktailSort Main Operation Times: " + String(mainOpeartionTimes))
     print(array, "\n")
 }
@@ -113,7 +112,7 @@ func quickSort(array: inout Array<Int>) {
     
 }
 
-// Radix Sort
+// Radix Sort, should compare from right
 
 func radixSort(array: inout Array<Int>) {
     

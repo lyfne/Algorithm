@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0915BF1E7A8C750042EDD9 /* SearchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0915BE1E7A8C750042EDD9 /* SearchMethod.swift */; };
 		DA8981EC1E768C8800CDBE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8981EB1E768C8800CDBE2F /* AppDelegate.swift */; };
 		DA8981EE1E768C8800CDBE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8981ED1E768C8800CDBE2F /* ViewController.swift */; };
 		DA8981F01E768C8800CDBE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8981EF1E768C8800CDBE2F /* Assets.xcassets */; };
 		DA8981F31E768C8800CDBE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8981F11E768C8800CDBE2F /* Main.storyboard */; };
 		DA8981FE1E768C8800CDBE2F /* AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8981FD1E768C8800CDBE2F /* AlgorithmTests.swift */; };
 		DA8982091E768C8800CDBE2F /* AlgorithmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8982081E768C8800CDBE2F /* AlgorithmUITests.swift */; };
-		DA8982181E768D6300CDBE2F /* SortFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8982171E768D6300CDBE2F /* SortFunction.swift */; };
+		DA8982181E768D6300CDBE2F /* SortMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8982171E768D6300CDBE2F /* SortMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0915BE1E7A8C750042EDD9 /* SearchMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMethod.swift; sourceTree = "<group>"; };
 		DA8981E81E768C8800CDBE2F /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8981EB1E768C8800CDBE2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8981ED1E768C8800CDBE2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		DA8982041E768C8800CDBE2F /* AlgorithmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8982081E768C8800CDBE2F /* AlgorithmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmUITests.swift; sourceTree = "<group>"; };
 		DA89820A1E768C8800CDBE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA8982171E768D6300CDBE2F /* SortFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortFunction.swift; sourceTree = "<group>"; };
+		DA8982171E768D6300CDBE2F /* SortMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +130,8 @@
 		DA8982161E768D2600CDBE2F /* Sort */ = {
 			isa = PBXGroup;
 			children = (
-				DA8982171E768D6300CDBE2F /* SortFunction.swift */,
+				DA8982171E768D6300CDBE2F /* SortMethod.swift */,
+				DA0915BE1E7A8C750042EDD9 /* SearchMethod.swift */,
 			);
 			name = Sort;
 			sourceTree = "<group>";
@@ -266,9 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0915BF1E7A8C750042EDD9 /* SearchMethod.swift in Sources */,
 				DA8981EE1E768C8800CDBE2F /* ViewController.swift in Sources */,
 				DA8981EC1E768C8800CDBE2F /* AppDelegate.swift in Sources */,
-				DA8982181E768D6300CDBE2F /* SortFunction.swift in Sources */,
+				DA8982181E768D6300CDBE2F /* SortMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +512,7 @@
 				DA89820F1E768C8800CDBE2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA8982101E768C8900CDBE2F /* Build configuration list for PBXNativeTarget "AlgorithmTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				DA8982121E768C8900CDBE2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA8982131E768C8900CDBE2F /* Build configuration list for PBXNativeTarget "AlgorithmUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				DA8982151E768C8900CDBE2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
