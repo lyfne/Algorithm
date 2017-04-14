@@ -103,13 +103,65 @@ func insertionSort(array: inout Array<Int>) {
 // Merge Sort, use Divide and Conquer
 
 func mergeSort(array: inout Array<Int>) {
+    if (array.count < 2) {
+        return
+    }
     
+    var mainOpeartionTimes = 0
+    
+    print("MergeSort Main Operation Times: " + String(mainOpeartionTimes))
+    print(array, "\n")
 }
 
 // Quick Sort
 
 func quickSort(array: inout Array<Int>) {
+    if (array.count < 2) {
+        return
+    }
     
+    var mainOpeartionTimes = 0
+    
+    mainOpeartionTimes = mainOpeartionTimes + quickSortSub(array: &array, leftIndex: 0, rightIndex: array.count - 1)
+    
+    print("QuickSort Main Operation Times: " + String(mainOpeartionTimes))
+    print(array, "\n")
+}
+
+func quickSortSub(array: inout Array<Int>, leftIndex: Int, rightIndex: Int)->Int {
+    if leftIndex >= rightIndex {
+        return 0
+    }
+    
+    var mainOpeartionTimes = 0
+    var left = leftIndex
+    var right = rightIndex
+    
+    // leftIndex is pivot
+    while(true) {
+        while array[left] <= array[leftIndex] && left < rightIndex {
+            left = left + 1
+            mainOpeartionTimes = mainOpeartionTimes + 1
+        }
+        
+        while array[right] > array[leftIndex] && right > leftIndex {
+            right = right - 1
+            mainOpeartionTimes = mainOpeartionTimes + 1
+        }
+        
+        if (left >= right) {
+            break
+        }
+        
+        swap(array: &array, left: left, right: right)
+    }
+    
+    swap(array: &array, left: leftIndex, right: right)
+    
+    mainOpeartionTimes = mainOpeartionTimes + quickSortSub(array: &array, leftIndex: leftIndex, rightIndex: right - 1)
+    mainOpeartionTimes = mainOpeartionTimes + quickSortSub(array: &array, leftIndex: right + 1, rightIndex: rightIndex)
+    
+    return mainOpeartionTimes
 }
 
 // Radix Sort, should compare from right

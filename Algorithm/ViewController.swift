@@ -10,19 +10,12 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var arraySizeTextField: NSTextField!
+    @IBOutlet weak var formatter: NumberFormatter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let array = [3, 4, 7, 1, 10, 6, 2, 19, 5, 34, 78, 45, 23, 42, 109, 984, 234, 567, 342, 10924, 2345, 542, 5069, 40987,8745, 4, 3, 56, 987, 6532, 59, 893, 7923, 90175, 359, 5820, 863, 81, 78, 4, 87, 98, 2415]
-        print("Array Count: ", array.count, "\n")
-        
-        var array1 = array
-        var array2 = array
-        var array3 = array
-        
-        bubbleSort(array: &array1)
-        insertionSort(array: &array2)
-        cocktailSort(array: &array3)
+        formatter.usesGroupingSeparator = false
     }
 
     override var representedObject: Any? {
@@ -30,7 +23,34 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
+    @IBAction func generateArray(_ sender: NSButton) {
+        let size = arraySizeTextField.intValue
+        if size <= 0 {
+            return
+        }
+        
+        var array = Array<Int>()
+        
+        for _ in 0..<size {
+            let value = arc4random() % UInt32(size)
+            array.append(Int(value))
+        }
+        
+        print("Array Count: ", array.count, "\n")
+      //  runSort(array: &array)
+    }
+    
+    func runSort(array: inout Array<Int>) {
+        var array1 = array
+        var array2 = array
+        var array3 = array
+        var array4 = array
+        
+        bubbleSort(array: &array1)
+        insertionSort(array: &array2)
+        cocktailSort(array: &array3)
+        quickSort(array: &array4)
+    }
 }
 
